@@ -3,15 +3,19 @@
 Personal site for **Monum Hashmi**, AI research engineer.
 Live: <https://monum-hashmi-portfolio.netlify.app>
 
-A deliberately lean, typographic single page: dark theme, one warm accent,
-semantic HTML with a real heading hierarchy, and **no client-side JavaScript**.
-It reads as a researcher who ships — research first, then projects and work.
+A premium, motion-forward dark portfolio: full-bleed photo hero, warm accent,
+scroll-reveal animation, and card-based sections. Research-first — it reads as a
+researcher who ships. Semantic HTML with a real heading hierarchy, Open Graph
+tags, and no browser storage.
 
 ## Stack
 
-- **Vite + TypeScript** build (config only; the page itself ships zero JS).
-- Hand-authored `index.html` + one stylesheet (`src/style.css`).
-- System font stacks (serif headings, system sans body) — no web-font requests.
+- **Vite + TypeScript** build.
+- `index.html` (content + meta/OG/JSON-LD) + `src/style.css` + a tiny
+  `src/main.ts` (scroll-reveal, nav state, hero parallax — all behind a
+  `prefers-reduced-motion` guard, no storage).
+- Fonts: **Space Grotesk** (display) + **Inter** (body) via Google Fonts, with
+  system fallbacks.
 - Deployed on **Netlify** (`npm run build` → `dist/`, pinned in `netlify.toml`).
 
 ## Develop
@@ -23,43 +27,36 @@ npm run build    # production build → dist/
 npm run preview  # preview the production build
 ```
 
-## Structure
+## Files
 
 ```
 index.html            # all content + meta / Open Graph / JSON-LD
-src/style.css         # the single stylesheet
+src/style.css         # design system + animation
+src/main.ts           # progressive-enhancement JS (reveal, nav, parallax)
 public/
-  favicon.svg         # monogram favicon
-  og.png              # 1200×630 social preview image
+  favicon.svg
+  og.png              # 1200×630 social preview
   monum-hashmi-cv.pdf # linked from "Download CV"
-netlify.toml          # build command + publish dir + asset caching
+  monum-hero.jpg      # (add this) full-bleed hero photo
+netlify.toml
 ```
+
+## Adding the hero photo
+
+The hero is wired for a full-bleed background photo with a legibility scrim, so
+it drops in with **one line** — no broken image if the file is absent.
+
+1. Add the image to `public/` as `public/monum-hero.jpg` (landscape or
+   portrait; a clean, well-lit shot works best). It's referenced via CSS
+   `background-image`, so a missing file simply falls back to the gradient hero.
+2. In `src/style.css`, in `:root`, set:
+   ```css
+   --hero-photo: url("/monum-hero.jpg");
+   ```
+3. Tune `background-position` on `.hero__media` if the crop needs nudging, and
+   raise the left/bottom scrim opacity in `.hero__scrim` if the photo is bright.
 
 ## Editing content
 
-All copy lives directly in `index.html` — each research paper and project is a
-`<li class="entry">`. To change wording, edit the text in place; to add an item,
-copy an existing `<li>` block.
-
-## Adding the headshot (optional)
-
-The site is intentionally text-forward, but a small portrait can sit in the
-hero. To add one:
-
-1. Put the image in `public/` (e.g. `public/monum.jpg`), ideally a square-ish
-   head-and-shoulders crop, ~480px.
-2. In `index.html`, inside `<section class="hero">`, add near the top:
-   ```html
-   <img class="portrait" src="/monum.jpg" width="120" height="120"
-        alt="Monum Hashmi" />
-   ```
-3. In `src/style.css` add:
-   ```css
-   .portrait { width: 120px; height: 120px; border-radius: 999px;
-     object-fit: cover; margin-bottom: 1.5rem; }
-   ```
-
-## Regenerating the OG image
-
-`public/og.png` is a static render. To change it, edit the source markup and
-re-render at 1200×630 (any HTML-to-PNG method works), then replace the file.
+All copy lives in `index.html`. Each research paper is an `<article class="paper">`
+and each project a `<article class="card">` — duplicate a block to add an item.

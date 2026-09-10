@@ -7,14 +7,13 @@
     <title>Monum Hashmi — AI Research Engineer</title>
     <meta
       name="description"
-      content="Monum Hashmi — AI research engineer in Lahore working on AI safety, security evaluation, and interpretability. Research on validity-aware evaluation, deepfake detection, and LLM security, alongside production LLM systems."
+      content="Monum Hashmi — AI research engineer in Lahore working on AI safety, security evaluation, and interpretability. First-author research on validity-aware evaluation, compression-robust deepfake detection, and LLM security, plus production LLM systems."
     />
     <link rel="canonical" href="https://monum-hashmi-portfolio.netlify.app/" />
     <meta name="author" content="Monum Hashmi" />
-    <meta name="theme-color" content="#0e0e0f" />
+    <meta name="theme-color" content="#0a0a0b" />
     <meta name="color-scheme" content="dark" />
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Monum Hashmi" />
     <meta property="og:title" content="Monum Hashmi — AI Research Engineer" />
@@ -27,8 +26,6 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Monum Hashmi — AI Research Engineer" />
-
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Monum Hashmi — AI Research Engineer" />
     <meta
@@ -38,6 +35,13 @@
     <meta name="twitter:image" content="https://monum-hashmi-portfolio.netlify.app/og.png" />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/src/style.css" />
 
     <script type="application/ld+json">
@@ -48,23 +52,10 @@
         "jobTitle": "AI Research Engineer",
         "url": "https://monum-hashmi-portfolio.netlify.app/",
         "email": "mailto:monumhashmi1@gmail.com",
-        "address": {
-          "@type": "PostalPlace",
-          "addressLocality": "Lahore",
-          "addressCountry": "Pakistan"
-        },
+        "address": { "@type": "PostalPlace", "addressLocality": "Lahore", "addressCountry": "Pakistan" },
         "worksFor": { "@type": "Organization", "name": "2M Innovations" },
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "University of Management and Technology, Lahore"
-        },
-        "knowsAbout": [
-          "AI safety",
-          "Security evaluation",
-          "Interpretability",
-          "Large language models",
-          "Computer vision"
-        ],
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Management and Technology, Lahore" },
+        "knowsAbout": ["AI safety", "Security evaluation", "Interpretability", "Large language models", "Computer vision"],
         "sameAs": [
           "https://github.com/monum-hashmi",
           "https://scholar.google.com/citations?user=cR0Gm3cAAAAJ",
@@ -78,263 +69,370 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header" role="banner">
-      <a class="wordmark" href="#top" aria-label="Monum Hashmi — home">MH</a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="#research">Research</a>
-        <a href="#projects">Projects</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <header class="nav" id="nav">
+      <div class="nav__inner">
+        <a class="nav__mark" href="#top" aria-label="Monum Hashmi — home">
+          Monum&nbsp;Hashmi
+        </a>
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#research">Research</a>
+          <a href="#projects">Projects</a>
+          <a href="#work">Work</a>
+          <a href="#skills">Skills</a>
+          <a class="nav__cta" href="#contact">Contact</a>
+        </nav>
+      </div>
     </header>
 
     <main id="main">
-      <!-- HERO -->
+      <!-- ============ HERO ============ -->
       <section class="hero" id="top" aria-labelledby="name">
-        <p class="eyebrow">AI Research Engineer · Lahore</p>
-        <h1 id="name">Monum Hashmi</h1>
-        <p class="lead">
-          I stress-test whether AI systems actually do what their results
-          claim — with negative controls, adversarial evaluation, and
-          interpretability — and I build the LLM systems in between.
-        </p>
-        <p class="sub">
-          Third-year BS Artificial Intelligence at UMT Lahore. AI Engineer at
-          2M Innovations, shipping LLM agents and RAG systems in production.
-        </p>
-        <ul class="links" aria-label="Profiles and contact">
-          <li>
-            <a href="https://github.com/monum-hashmi" rel="me noopener" target="_blank">GitHub</a>
-          </li>
-          <li>
-            <a href="https://scholar.google.com/citations?user=cR0Gm3cAAAAJ" rel="me noopener" target="_blank">Google&nbsp;Scholar</a>
-          </li>
-          <li>
-            <a href="https://linkedin.com/in/monum-hashmi" rel="me noopener" target="_blank">LinkedIn</a>
-          </li>
-          <li><a href="mailto:monumhashmi1@gmail.com">Email</a></li>
-          <li>
-            <a class="cv" href="/monum-hashmi-cv.pdf" target="_blank">Download&nbsp;CV</a>
-          </li>
-        </ul>
+        <div class="hero__glow" aria-hidden="true"></div>
+        <div class="hero__media" aria-hidden="true"></div>
+        <div class="hero__scrim" aria-hidden="true"></div>
+
+        <div class="hero__content">
+          <p class="hero__eyebrow reveal" data-reveal>
+            <span class="dot" aria-hidden="true"></span>
+            Open to research roles &amp; collaboration
+          </p>
+          <h1 id="name" class="hero__name reveal" data-reveal>Monum Hashmi</h1>
+          <p class="hero__role reveal" data-reveal>
+            AI Research Engineer — Safety, Security &amp; Interpretability
+          </p>
+          <p class="hero__lead reveal" data-reveal>
+            I stress-test whether AI systems actually do what their results
+            claim — with negative controls, adversarial evaluation, and
+            interpretability — and I build the LLM systems in between.
+          </p>
+
+          <div class="hero__actions reveal" data-reveal>
+            <a class="btn btn--primary" href="#research">View research</a>
+            <a class="btn btn--ghost" href="/monum-hashmi-cv.pdf" target="_blank" rel="noopener">Download CV</a>
+          </div>
+
+          <ul class="hero__social reveal" data-reveal aria-label="Profiles">
+            <li><a href="https://github.com/monum-hashmi" target="_blank" rel="me noopener">GitHub</a></li>
+            <li><a href="https://scholar.google.com/citations?user=cR0Gm3cAAAAJ" target="_blank" rel="me noopener">Google Scholar</a></li>
+            <li><a href="https://linkedin.com/in/monum-hashmi" target="_blank" rel="me noopener">LinkedIn</a></li>
+            <li><a href="mailto:monumhashmi1@gmail.com">Email</a></li>
+          </ul>
+        </div>
+
+        <a class="hero__scroll" href="#glance" aria-label="Scroll to content">
+          <span></span>
+        </a>
       </section>
 
-      <!-- RESEARCH -->
-      <section class="section" id="research" aria-labelledby="research-h">
-        <h2 class="section-title" id="research-h">Research</h2>
-        <p class="section-note">
-          The through-line: I care whether a measured result means what it
-          claims. Full manuscripts and code —
-          <a href="https://github.com/monum-hashmi/research-papers" rel="noopener" target="_blank">github.com/monum-hashmi/research-papers</a>.
-        </p>
-
-        <ol class="entries" role="list">
-          <li class="entry entry--feature">
-            <p class="status">First author · manuscript under supervisor review</p>
-            <h3 class="entry-title">
-              <a href="https://github.com/monum-hashmi/research-papers" rel="noopener" target="_blank">
-                Validity-Aware Evaluation of EEG–ECG Affective-State Fusion
-              </a>
-            </h3>
-            <p class="entry-body">
-              A negative-control framework that asks whether the gains
-              attributed to EEG–ECG fusion survive when the pairing between the
-              two signals is deliberately broken. They don't — correct pairing
-              scored <em>below</em> a label-matched control (Pair-Validity Index
-              &minus;0.012 for valence, &minus;0.008 for arousal), so the
-              reported “fusion benefit” is an artifact of evaluation design, not
-              physiological correspondence.
-            </p>
-          </li>
-
-          <li class="entry">
-            <p class="status">First of three authors · under review</p>
-            <h3 class="entry-title">
-              <a href="https://github.com/monum-hashmi/research-papers" rel="noopener" target="_blank">
-                MSAFE-GC: Compression-Robust, Explainable Deepfake Detection
-              </a>
-            </h3>
-            <p class="entry-body">
-              A multi-scale architecture that fuses fine-, medium-, and
-              coarse-resolution streams so manipulation artifacts survive the
-              heavy compression real platforms apply to video — targeting the
-              low-quality tier where single-scale detectors quietly fail.
-              Grad-CAM is used as a diagnostic to confirm the model attends to
-              manipulated regions rather than dataset shortcuts.
-            </p>
-            <p class="figure">FaceForensics++ low-quality tier · 96.30% accuracy · 0.9903 AUC</p>
-          </li>
-
-          <li class="entry">
-            <p class="status">First author · study design, analysis in progress</p>
-            <h3 class="entry-title">
-              <a href="https://github.com/monum-hashmi/research-papers" rel="noopener" target="_blank">
-                A Governance Framework for Generative AI in Saudi Higher Education
-              </a>
-            </h3>
-            <p class="entry-body">
-              A three-level governance framework — national, institutional, and
-              classroom — for generative-AI adoption in Saudi higher education,
-              built from a primary-source review of regulation and university
-              policy. The study design is complete; the document analysis is in
-              progress.
-            </p>
-          </li>
-
-          <li class="entry">
-            <p class="status">In progress · with Daniyal Adeeb</p>
-            <h3 class="entry-title">
-              <a href="https://github.com/monum-hashmi/research-papers" rel="noopener" target="_blank">
-                Interpretable Violence Detection: A Transparent Motion-Feature Framework
-              </a>
-            </h3>
-            <p class="entry-body">
-              Replaces black-box video classification with hand-designed motion
-              features and transparent decision rules, so each prediction
-              decomposes into named physical causes instead of a post-hoc
-              saliency map. The emerging finding is that feature behaviour is
-              regime-dependent across visual contexts — a failure mode aggregate
-              accuracy hides.
-            </p>
-          </li>
-        </ol>
-      </section>
-
-      <!-- PROJECTS -->
-      <section class="section" id="projects" aria-labelledby="projects-h">
-        <h2 class="section-title" id="projects-h">Projects</h2>
-
-        <ol class="entries" role="list">
-          <li class="entry">
-            <h3 class="entry-title">
-              <a href="https://github.com/monum-hashmi/groundline" rel="noopener" target="_blank">Groundline</a>
-            </h3>
-            <p class="entry-body">
-              A questionnaire-answering pipeline that answers only where a policy
-              clause genuinely supports the answer, and abstains otherwise. It
-              runs grounding and relevance as two independent checks, so a
-              grounded-but-irrelevant citation is caught rather than trusted.
-            </p>
-            <p class="stack">Python · Nutrient DWS Extraction API</p>
-          </li>
-
-          <li class="entry">
-            <h3 class="entry-title">
-              <a href="https://github.com/monum-hashmi/code-review-agent" rel="noopener" target="_blank">Multi-Agent Code Review System</a>
-            </h3>
-            <p class="entry-body">
-              A LangGraph pipeline that routes a pull request through specialised
-              correctness, style, and security agents, each grounded in the
-              surrounding codebase via ChromaDB retrieval so feedback cites real
-              repository patterns, not just the diff. Served over FastAPI on EC2.
-            </p>
-            <p class="stack">LangGraph · FastAPI · ChromaDB · AWS EC2 · OpenRouter</p>
-          </li>
-
-          <li class="entry">
-            <h3 class="entry-title">
-              <a href="https://github.com/aiexpert-Azan/Application-Layer-Intrusion-Detection-System" rel="noopener" target="_blank">Application-Layer Intrusion Detection for LLM Systems</a>
-            </h3>
-            <p class="entry-body">
-              A fine-tuned BERT classifier that separates prompt-injection,
-              SQL-injection, and PII-leakage attempts from benign lookalikes at
-              the application layer of LLM systems. I owned the adversarial
-              dataset curation, the labelling schema that keeps attack classes
-              distinct from near-duplicates, and model training.
-            </p>
-            <p class="stack">HuggingFace Transformers · BERT · PyTorch</p>
-          </li>
-
-          <li class="entry">
-            <h3 class="entry-title">
-              <a href="https://github.com/monum-hashmi/suspicious-vehicle-tracker" rel="noopener" target="_blank">Suspicious Vehicle &amp; Person Tracker</a>
-            </h3>
-            <p class="entry-body">
-              Real-time multi-object tracking with rule-based alerting for
-              stationary person–vehicle pairs inside user-defined regions of
-              interest, calibrated and evaluated against MOT17 ground truth.
-            </p>
-            <p class="stack">YOLOv8 · DeepSORT · OpenCV</p>
-          </li>
-        </ol>
-      </section>
-
-      <!-- WORK -->
-      <section class="section" id="work" aria-labelledby="work-h">
-        <h2 class="section-title" id="work-h">Work</h2>
-        <div class="entry">
-          <p class="status">
-            AI Engineer · 2M Innovations · Lahore ·
-            <time datetime="2026">2026–present</time>
-          </p>
-          <p class="entry-body">
-            I own client-facing LLM agent systems end to end — retrieval design,
-            prompt architecture, evaluation, and deployment on frontier-model
-            APIs — now handling live customer conversations in production for
-            restaurant and retail clients.
-          </p>
-          <p class="entry-body">
-            I gate every release on grounded-answer checks and adversarial input
-            testing, and separate deterministic transaction logic from generated
-            answers so failure modes surface in review, not in front of
-            customers.
-          </p>
+      <!-- ============ AT A GLANCE ============ -->
+      <section class="glance" id="glance" aria-label="At a glance">
+        <div class="wrap glance__grid">
+          <div class="stat reveal" data-reveal>
+            <span class="stat__num">4</span>
+            <span class="stat__label">Research papers · first-author lead</span>
+          </div>
+          <div class="stat reveal" data-reveal>
+            <span class="stat__num">98.88<span class="pct">%</span></span>
+            <span class="stat__label">LLM attack-detection accuracy</span>
+          </div>
+          <div class="stat reveal" data-reveal>
+            <span class="stat__num">Live</span>
+            <span class="stat__label">LLM agents in production at 2M Innovations</span>
+          </div>
+          <div class="stat reveal" data-reveal>
+            <span class="stat__num">’27</span>
+            <span class="stat__label">BS Artificial Intelligence, UMT Lahore</span>
+          </div>
         </div>
       </section>
 
-      <!-- SKILLS -->
-      <section class="section" id="skills" aria-labelledby="skills-h">
-        <h2 class="section-title" id="skills-h">Skills</h2>
-        <dl class="skills">
-          <div class="skill-row">
-            <dt>LLMs &amp; Agents</dt>
-            <dd>LangChain, LangGraph, multi-agent orchestration, RAG, embeddings, ChromaDB, OpenAI / Anthropic / OpenRouter APIs</dd>
+      <!-- ============ RESEARCH ============ -->
+      <section class="section" id="research" aria-labelledby="research-h">
+        <div class="wrap">
+          <div class="section__head reveal" data-reveal>
+            <p class="kicker">01 — Research</p>
+            <h2 class="section__title" id="research-h">Does the result mean what it claims?</h2>
+            <p class="section__note">
+              That question runs through everything. Full manuscripts and code live at
+              <a href="https://github.com/monum-hashmi/research-papers" target="_blank" rel="noopener">github.com/monum-hashmi/research-papers</a>.
+            </p>
           </div>
-          <div class="skill-row">
-            <dt>Machine Learning &amp; DL</dt>
-            <dd>PyTorch, HuggingFace Transformers, scikit-learn, timm, BERT fine-tuning, XGBoost</dd>
+
+          <div class="papers">
+            <article class="paper paper--feature reveal" data-reveal>
+              <div class="paper__tags">
+                <span class="pill pill--accent">Featured</span>
+                <span class="pill">First author</span>
+                <span class="pill pill--soft">Manuscript under supervisor review</span>
+              </div>
+              <h3 class="paper__title">
+                <a href="https://github.com/monum-hashmi/research-papers" target="_blank" rel="noopener">
+                  Validity-Aware Evaluation of EEG–ECG Affective-State Fusion
+                </a>
+              </h3>
+              <p class="paper__body">
+                A negative-control framework that asks whether the gains
+                attributed to EEG–ECG fusion survive when the pairing between the
+                two signals is deliberately broken.
+              </p>
+              <p class="paper__finding">
+                They don’t. Correct pairing scored <em>below</em> a label-matched
+                control — Pair-Validity Index &minus;0.012 (valence), &minus;0.008
+                (arousal) — so the reported “fusion benefit” is an artifact of
+                evaluation design, not physiological correspondence. The null
+                result is the finding.
+              </p>
+            </article>
+
+            <div class="papers__grid">
+              <article class="paper reveal" data-reveal>
+                <div class="paper__tags">
+                  <span class="pill">First of three authors</span>
+                  <span class="pill pill--soft">Under review</span>
+                </div>
+                <h3 class="paper__title">
+                  <a href="https://github.com/monum-hashmi/research-papers" target="_blank" rel="noopener">
+                    MSAFE-GC: Compression-Robust, Explainable Deepfake Detection
+                  </a>
+                </h3>
+                <p class="paper__body">
+                  A multi-scale architecture fusing fine, medium, and coarse
+                  resolution streams so manipulation artifacts survive the heavy
+                  compression real platforms apply — the low-quality tier where
+                  single-scale detectors quietly fail. Grad-CAM is used as a
+                  diagnostic to confirm the model attends to manipulated regions,
+                  not dataset shortcuts.
+                </p>
+                <p class="paper__meta">FaceForensics++ LQ tier · 96.30% acc · 0.9903 AUC</p>
+              </article>
+
+              <article class="paper reveal" data-reveal>
+                <div class="paper__tags">
+                  <span class="pill">First author</span>
+                  <span class="pill pill--soft">Study design · in progress</span>
+                </div>
+                <h3 class="paper__title">
+                  <a href="https://github.com/monum-hashmi/research-papers" target="_blank" rel="noopener">
+                    A Governance Framework for Generative AI in Saudi Higher Education
+                  </a>
+                </h3>
+                <p class="paper__body">
+                  A three-level governance framework — national, institutional,
+                  and classroom — for generative-AI adoption, built from a
+                  primary-source review of regulation and university policy. Study
+                  design complete; document analysis in progress.
+                </p>
+              </article>
+
+              <article class="paper reveal" data-reveal>
+                <div class="paper__tags">
+                  <span class="pill pill--soft">In progress</span>
+                  <span class="pill">with Daniyal Adeeb</span>
+                </div>
+                <h3 class="paper__title">
+                  <a href="https://github.com/monum-hashmi/research-papers" target="_blank" rel="noopener">
+                    Interpretable Violence Detection: A Transparent Motion-Feature Framework
+                  </a>
+                </h3>
+                <p class="paper__body">
+                  Replaces black-box video classification with hand-designed
+                  motion features and transparent rules, so each prediction
+                  decomposes into named physical causes. The emerging finding:
+                  feature behaviour is regime-dependent across visual contexts — a
+                  failure mode aggregate accuracy hides.
+                </p>
+              </article>
+            </div>
           </div>
-          <div class="skill-row">
-            <dt>Computer Vision</dt>
-            <dd>YOLOv8, DeepSORT, OpenCV, real-time detection &amp; tracking</dd>
-          </div>
-          <div class="skill-row">
-            <dt>Evaluation &amp; Interpretability</dt>
-            <dd>Negative controls, adversarial / red-team datasets, subject-independent cross-validation, Grad-CAM, SHAP, calibration &amp; error analysis</dd>
-          </div>
-          <div class="skill-row">
-            <dt>Backend &amp; Tooling</dt>
-            <dd>FastAPI, Streamlit, Pydantic, n8n, AWS EC2, Netlify, Python, SQL, Git / Linux</dd>
-          </div>
-        </dl>
+        </div>
       </section>
 
-      <!-- CONTACT -->
-      <section class="section" id="contact" aria-labelledby="contact-h">
-        <h2 class="section-title" id="contact-h">Contact</h2>
-        <p class="contact-lead">
-          Based in Lahore, Pakistan — open to research collaboration and roles
-          in AI safety, evaluation, and security. The fastest way to reach me is
-          <a href="mailto:monumhashmi1@gmail.com">email</a>.
-        </p>
-        <ul class="links" aria-label="Profiles and contact">
-          <li><a href="mailto:monumhashmi1@gmail.com">monumhashmi1@gmail.com</a></li>
-          <li><a href="https://github.com/monum-hashmi" rel="me noopener" target="_blank">GitHub</a></li>
-          <li><a href="https://scholar.google.com/citations?user=cR0Gm3cAAAAJ" rel="me noopener" target="_blank">Google&nbsp;Scholar</a></li>
-          <li><a href="https://linkedin.com/in/monum-hashmi" rel="me noopener" target="_blank">LinkedIn</a></li>
-          <li><a href="https://kaggle.com/monumhashmi" rel="me noopener" target="_blank">Kaggle</a></li>
-          <li><a class="cv" href="/monum-hashmi-cv.pdf" target="_blank">Download&nbsp;CV</a></li>
-        </ul>
-        <p class="certs">
-          Certifications — Agent Skills with Anthropic (DeepLearning.AI) · AWS
-          Academy Cloud Foundations · ChatGPT Prompt Engineering for Developers
-          (DeepLearning.AI)
-        </p>
+      <!-- ============ PROJECTS ============ -->
+      <section class="section section--alt" id="projects" aria-labelledby="projects-h">
+        <div class="wrap">
+          <div class="section__head reveal" data-reveal>
+            <p class="kicker">02 — Projects</p>
+            <h2 class="section__title" id="projects-h">Systems I’ve shipped</h2>
+          </div>
+
+          <div class="cards">
+            <article class="card reveal" data-reveal>
+              <h3 class="card__title">
+                <a href="https://github.com/monum-hashmi/groundline" target="_blank" rel="noopener">Groundline <span class="arr">↗</span></a>
+              </h3>
+              <p class="card__body">
+                A questionnaire-answering pipeline that answers only where a
+                policy clause genuinely supports the answer, and abstains
+                otherwise. Grounding and relevance run as two independent checks,
+                so a grounded-but-irrelevant citation is caught, not trusted.
+              </p>
+              <ul class="chips" aria-label="Stack">
+                <li>Python</li><li>Nutrient DWS Extraction API</li>
+              </ul>
+            </article>
+
+            <article class="card reveal" data-reveal>
+              <h3 class="card__title">
+                <a href="https://github.com/monum-hashmi/code-review-agent" target="_blank" rel="noopener">Multi-Agent Code Review <span class="arr">↗</span></a>
+              </h3>
+              <p class="card__body">
+                A LangGraph pipeline routing a pull request through specialised
+                correctness, style, and security agents — each grounded in the
+                surrounding codebase via ChromaDB retrieval, so feedback cites
+                real repository patterns, not just the diff. Served over FastAPI
+                on EC2.
+              </p>
+              <ul class="chips" aria-label="Stack">
+                <li>LangGraph</li><li>FastAPI</li><li>ChromaDB</li><li>AWS EC2</li><li>OpenRouter</li>
+              </ul>
+            </article>
+
+            <article class="card reveal" data-reveal>
+              <h3 class="card__title">
+                <a href="https://github.com/aiexpert-Azan/Application-Layer-Intrusion-Detection-System" target="_blank" rel="noopener">Application-Layer Intrusion Detection <span class="arr">↗</span></a>
+              </h3>
+              <p class="card__body">
+                A fine-tuned BERT classifier separating prompt-injection,
+                SQL-injection, and PII-leakage attempts from benign lookalikes at
+                the application layer of LLM systems. I owned adversarial dataset
+                curation, the labelling schema, and model training.
+              </p>
+              <ul class="chips" aria-label="Stack">
+                <li>HuggingFace</li><li>BERT</li><li>PyTorch</li><li>98.88% acc</li>
+              </ul>
+            </article>
+
+            <article class="card reveal" data-reveal>
+              <h3 class="card__title">
+                <a href="https://github.com/monum-hashmi/suspicious-vehicle-tracker" target="_blank" rel="noopener">Suspicious Vehicle &amp; Person Tracker <span class="arr">↗</span></a>
+              </h3>
+              <p class="card__body">
+                Real-time multi-object tracking with rule-based alerting for
+                stationary person–vehicle pairs inside user-defined regions of
+                interest, calibrated and evaluated against MOT17 ground truth.
+              </p>
+              <ul class="chips" aria-label="Stack">
+                <li>YOLOv8</li><li>DeepSORT</li><li>OpenCV</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ WORK ============ -->
+      <section class="section" id="work" aria-labelledby="work-h">
+        <div class="wrap">
+          <div class="section__head reveal" data-reveal>
+            <p class="kicker">03 — Work</p>
+            <h2 class="section__title" id="work-h">Experience</h2>
+          </div>
+
+          <article class="work reveal" data-reveal>
+            <div class="work__meta">
+              <h3 class="work__role">AI Engineer</h3>
+              <p class="work__org">2M Innovations · Lahore</p>
+              <p class="work__time"><time datetime="2026">2026 — present</time></p>
+            </div>
+            <div class="work__body">
+              <p>
+                I own client-facing LLM agent systems end to end — retrieval
+                design, prompt architecture, evaluation, and deployment on
+                frontier-model APIs — now handling live customer conversations in
+                production for restaurant and retail clients.
+              </p>
+              <p>
+                I gate every release on grounded-answer checks and adversarial
+                input testing, and separate deterministic transaction logic from
+                generated answers so failure modes surface in review, not in
+                front of customers.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS ============ -->
+      <section class="section section--alt" id="skills" aria-labelledby="skills-h">
+        <div class="wrap">
+          <div class="section__head reveal" data-reveal>
+            <p class="kicker">04 — Skills</p>
+            <h2 class="section__title" id="skills-h">Toolkit</h2>
+          </div>
+
+          <div class="skills">
+            <div class="skillgroup reveal" data-reveal>
+              <h3>LLMs &amp; Agents</h3>
+              <ul class="chips">
+                <li>LangChain</li><li>LangGraph</li><li>Multi-agent orchestration</li>
+                <li>RAG</li><li>Embeddings</li><li>ChromaDB</li>
+                <li>OpenAI / Anthropic / OpenRouter</li>
+              </ul>
+            </div>
+            <div class="skillgroup reveal" data-reveal>
+              <h3>Machine Learning &amp; DL</h3>
+              <ul class="chips">
+                <li>PyTorch</li><li>HuggingFace Transformers</li><li>scikit-learn</li>
+                <li>timm</li><li>BERT fine-tuning</li><li>XGBoost</li>
+              </ul>
+            </div>
+            <div class="skillgroup reveal" data-reveal>
+              <h3>Computer Vision</h3>
+              <ul class="chips">
+                <li>YOLOv8</li><li>DeepSORT</li><li>OpenCV</li><li>Real-time detection &amp; tracking</li>
+              </ul>
+            </div>
+            <div class="skillgroup reveal" data-reveal>
+              <h3>Evaluation &amp; Interpretability</h3>
+              <ul class="chips">
+                <li>Negative controls</li><li>Adversarial / red-team datasets</li>
+                <li>Subject-independent CV</li><li>Grad-CAM</li><li>SHAP</li><li>Calibration &amp; error analysis</li>
+              </ul>
+            </div>
+            <div class="skillgroup reveal" data-reveal>
+              <h3>Backend &amp; Tooling</h3>
+              <ul class="chips">
+                <li>FastAPI</li><li>Streamlit</li><li>Pydantic</li><li>n8n</li>
+                <li>AWS EC2</li><li>Netlify</li><li>Python</li><li>SQL</li><li>Git / Linux</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section class="section contact" id="contact" aria-labelledby="contact-h">
+        <div class="wrap contact__inner reveal" data-reveal>
+          <p class="kicker">05 — Contact</p>
+          <h2 class="section__title" id="contact-h">Let’s build something that holds up.</h2>
+          <p class="contact__lead">
+            Based in Lahore, Pakistan — open to research collaboration and roles
+            in AI safety, evaluation, and security.
+          </p>
+          <div class="contact__actions">
+            <a class="btn btn--primary" href="mailto:monumhashmi1@gmail.com">monumhashmi1@gmail.com</a>
+            <a class="btn btn--ghost" href="/monum-hashmi-cv.pdf" target="_blank" rel="noopener">Download CV</a>
+          </div>
+          <ul class="contact__social" aria-label="Profiles">
+            <li><a href="https://github.com/monum-hashmi" target="_blank" rel="me noopener">GitHub</a></li>
+            <li><a href="https://scholar.google.com/citations?user=cR0Gm3cAAAAJ" target="_blank" rel="me noopener">Google Scholar</a></li>
+            <li><a href="https://linkedin.com/in/monum-hashmi" target="_blank" rel="me noopener">LinkedIn</a></li>
+            <li><a href="https://kaggle.com/monumhashmi" target="_blank" rel="me noopener">Kaggle</a></li>
+          </ul>
+          <p class="contact__certs">
+            Agent Skills with Anthropic (DeepLearning.AI) · AWS Academy Cloud
+            Foundations · ChatGPT Prompt Engineering for Developers
+          </p>
+        </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <p>© 2026 Monum Hashmi · Lahore, Pakistan</p>
+    <footer class="foot">
+      <div class="wrap foot__inner">
+        <span>© 2026 Monum Hashmi</span>
+        <span>Lahore, Pakistan</span>
+      </div>
     </footer>
+
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
