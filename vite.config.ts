@@ -1,7 +1,11 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
+// Static, JS-free build. `index.html` is the entry; the linked stylesheet is
+// the only processed asset. Output goes to `dist/` for Netlify.
 export default defineConfig({
-  plugins: [react()],
+  build: {
+    target: 'es2020',
+    cssMinify: true,
+    assetsInlineLimit: 0,
+  },
 });

@@ -1,11 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <defs>
-    <linearGradient id="fg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#646973" />
-      <stop offset="100%" stop-color="#BBCCD7" />
-    </linearGradient>
-  </defs>
-  <rect width="100" height="100" rx="22" fill="#0C0C0C" />
-  <text x="50" y="68" font-family="Kanit, sans-serif" font-size="56" font-weight="900"
-        text-anchor="middle" fill="url(#fg)">M</text>
+  <rect width="100" height="100" rx="22" fill="#0e0e0f" />
+  <rect x="4" y="4" width="92" height="92" rx="19" fill="none" stroke="#dda15e" stroke-opacity="0.35" stroke-width="2" />
+  <text x="50" y="70" text-anchor="middle"
+        font-family="Iowan Old Style, Palatino, Georgia, 'Times New Roman', serif"
+        font-size="58" font-weight="600" fill="#dda15e">M</text>
 </svg>

@@ -1,54 +1,65 @@
 # Monum Hashmi — Portfolio
 
-An AI Engineer / Researcher portfolio landing page for **Monum Hashmi**, built with
-React, TypeScript, Tailwind CSS, Framer Motion, and Lucide React.
+Personal site for **Monum Hashmi**, AI research engineer.
+Live: <https://monum-hashmi-portfolio.netlify.app>
 
-Dark theme (`#0C0C0C`), Kanit typeface, fluid `clamp()` typography, and a set of
-scroll-driven animations (magnetic hero portrait, scroll-linked marquee,
-character-by-character reveal, and sticky-stacking project cards).
+A deliberately lean, typographic single page: dark theme, one warm accent,
+semantic HTML with a real heading hierarchy, and **no client-side JavaScript**.
+It reads as a researcher who ships — research first, then projects and work.
 
-## Getting started
+## Stack
+
+- **Vite + TypeScript** build (config only; the page itself ships zero JS).
+- Hand-authored `index.html` + one stylesheet (`src/style.css`).
+- System font stacks (serif headings, system sans body) — no web-font requests.
+- Deployed on **Netlify** (`npm run build` → `dist/`, pinned in `netlify.toml`).
+
+## Develop
 
 ```bash
 npm install
 npm run dev      # local dev server
-npm run build    # type-check + production build to dist/
+npm run build    # production build → dist/
 npm run preview  # preview the production build
 ```
 
-## Sections
+## Structure
 
-1. **Hero** — navbar, gradient headline, tagline, contact CTA, magnetic portrait.
-2. **Marquee** — two rows of tiles that slide horizontally with scroll.
-3. **About** — gradient heading, scroll-reveal bio, decorative corner icons.
-4. **Focus Areas** — five numbered focus areas on a light panel.
-5. **Projects** — three sticky-stacking cards (Groundline, MSAFE-GC, SecureIDS).
+```
+index.html            # all content + meta / Open Graph / JSON-LD
+src/style.css         # the single stylesheet
+public/
+  favicon.svg         # monogram favicon
+  og.png              # 1200×630 social preview image
+  monum-hashmi-cv.pdf # linked from "Download CV"
+netlify.toml          # build command + publish dir + asset caching
+```
 
-## ⚠️ Image placeholders — swap before shipping
+## Editing content
 
-Every image in the **marquee** and **project cards**, plus the **hero portrait**,
-is currently a generated placeholder clearly marked `TEMP`. Replace them with real
-assets:
+All copy lives directly in `index.html` — each research paper and project is a
+`<li class="entry">`. To change wording, edit the text in place; to add an item,
+copy an existing `<li>` block.
 
-- **Hero portrait** — drop a transparent-background cutout into `src/assets/`
-  (e.g. `monum-portrait.png`) and update the import in
-  `src/sections/HeroSection.tsx`:
-  ```ts
-  import portrait from '../assets/monum-portrait.png';
-  ```
-- **Marquee tiles** — the labeled placeholders are generated in
-  `src/assets/placeholders.ts` (`marqueePlaceholders`). Replace that array with
-  imports of the real screenshots/GIFs.
-- **Project screenshots** — each project in `src/sections/ProjectsSection.tsx`
-  uses `placeholder({ ... })` for its three image slots. Swap those calls for
-  imports of the real images (Groundline UI, MSAFE-GC Grad-CAM, SecureIDS
-  dashboard, etc.).
+## Adding the headshot (optional)
 
-The four **About-section corner icons** are hand-made SVGs in `src/assets/`
-(`icon-neural.svg`, `icon-circuit.svg`, `icon-chip.svg`, `icon-dataflow.svg`) and
-can stay as-is or be replaced.
+The site is intentionally text-forward, but a small portrait can sit in the
+hero. To add one:
 
-## Content
+1. Put the image in `public/` (e.g. `public/monum.jpg`), ideally a square-ish
+   head-and-shoulders crop, ~480px.
+2. In `index.html`, inside `<section class="hero">`, add near the top:
+   ```html
+   <img class="portrait" src="/monum.jpg" width="120" height="120"
+        alt="Monum Hashmi" />
+   ```
+3. In `src/style.css` add:
+   ```css
+   .portrait { width: 120px; height: 120px; border-radius: 999px;
+     object-fit: cover; margin-bottom: 1.5rem; }
+   ```
 
-All copy (bio, focus areas, project descriptions, links) is sourced from the
-verified content brief — no invented facts, metrics, or publication claims.
+## Regenerating the OG image
+
+`public/og.png` is a static render. To change it, edit the source markup and
+re-render at 1200×630 (any HTML-to-PNG method works), then replace the file.
